@@ -1,12 +1,12 @@
-import Button from "./Button"
+import Button from './Button';
 
-const Header = () => {
-  return (
-    <header className="header">
-      <h1>ToDo App</h1>
-      <Button color="green" text="Add" />
-    </header>
-  )
-}
+const Header = ({ onAdd }) => {
+	return (
+		<header className="header">
+			<h1>ToDo App</h1>
+			<Button color="green" text="Add" onClick={onAdd} />
+		</header>
+	);
+};
 
-export default Header
+export default Header;
