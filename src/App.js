@@ -1,17 +1,15 @@
 import React from 'react';
-import { useRoutes } from 'hookrouter';
+
+import { Route, HashRouter } from 'react-router-dom';
+
+import HomePage from './HomePage';
 import ToDoApp from './ToDoApp';
 
-const Routes = {
-	'/': () => (
-		<>
-			<h1>Hello world</h1>
-		</>
-	),
-	'/todoapp': () => <ToDoApp />,
-};
-
 export default function App() {
-	const routeResult = useRoutes(Routes);
-	return routeResult;
+	return (
+		<HashRouter hashtype="slash">
+			<Route path="/" exact component={HomePage} />
+			<Route path="/todoapp" component={ToDoApp} />
+		</HashRouter>
+	);
 }
