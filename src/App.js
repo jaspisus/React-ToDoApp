@@ -1,4 +1,3 @@
-import './css/App.min.css';
 import Header from './components/Header';
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
@@ -10,8 +9,20 @@ function App() {
 	const [tasks, setTasks] = useState([
 		{
 			id: 1,
-			text: 'ddd',
-			day: 'dd',
+			text: 'Kodzić',
+			day: '02.08.2021',
+			reminder: false,
+		},
+		{
+			id: 2,
+			text: 'Poćwiczyć Reacta',
+			day: '03.08.2021',
+			reminder: true,
+		},
+		{
+			id: 3,
+			text: 'Wysłać CV',
+			day: '03.08.2021',
 			reminder: true,
 		},
 	]);
